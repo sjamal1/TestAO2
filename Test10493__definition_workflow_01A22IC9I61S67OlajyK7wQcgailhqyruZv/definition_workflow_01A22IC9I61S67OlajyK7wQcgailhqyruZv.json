@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01A22IC9I61S67OlajyK7wQcgailhqyruZv",
+    "name": "Sanity Test Create Worklfow ",
+    "title": "Sanity Test Create Worklfow ",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "atomic_group": "Shams",
+        "is_atomic": true
+      },
+      "delete_workflow_instance": true,
+      "display_name": "Sanity Test Create Worklfow ",
+      "favorite": true,
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": false,
+        "execute_on_workflow_target": false,
+        "no_target": true,
+        "specify_on_workflow_start": false
+      },
+      "valid": "true"
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01A22ID6UBCLN5V0yos1oYdTT727FfgQvx9",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "source": "abc"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  }
+}
