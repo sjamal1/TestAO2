@@ -8,10 +8,9 @@
     "variables": null,
     "properties": {
       "atomic": {
-        "atomic_group": "Shams",
-        "is_atomic": true
+        "is_atomic": false
       },
-      "delete_workflow_instance": true,
+      "delete_workflow_instance": false,
       "display_name": "NewAtomicWFTest",
       "runtime_user": {
         "override_target_runtime_user": false,
@@ -58,6 +57,21 @@
             }
           ],
           "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01A5FVGA1P92W5z7aWLPU6k7IYYB5CjRuLy",
+        "name": "Find String",
+        "title": "Find String",
+        "type": "core.find_string",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Find String",
+          "searched_string": "test",
+          "skip_execution": false,
+          "source": "This is another test"
         },
         "object_type": "definition_activity"
       }
