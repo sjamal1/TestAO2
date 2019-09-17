@@ -40,6 +40,26 @@
           "source": "ABC"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01A5FOWJXCOFQ0SMcPG3oJD5UuTa9KzwgQd",
+        "name": "Replace String",
+        "title": "Replace String",
+        "type": "core.replacestring",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Replace String",
+          "input_string": "This is a test",
+          "replace_list": [
+            {
+              "replaced_string": "test",
+              "replacement_string": "best"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
