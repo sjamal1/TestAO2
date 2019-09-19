@@ -1,0 +1,116 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01A5IGLZ4HVAZ0InT9kcGFepcPFqI37XyeL",
+    "name": "Send Email",
+    "title": "Send Email",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "test_secure",
+          "type": "datatype.secure_string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01A5IGMHSA6OW1VDvEbSqyyBqywjP0i6u9D",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "email password",
+          "type": "datatype.secure_string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01A5IGMHSAHRR4FyaCqJNdZvSqTlp46y4jz",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "atomic_group": "Shams",
+        "is_atomic": true
+      },
+      "delete_workflow_instance": true,
+      "display_name": "Send Email",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "target_type": "email.smtp_endpoint",
+        "target_id": "definition_target_019TLS9TMB5573DTpGFSRPhVgIP2DovwBf9",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01A5IGMWDNNC26tBdAxq1E4tJa6pZaWZnCa",
+        "name": "Send Email",
+        "title": "Send Email",
+        "type": "email.smtp_send_email",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "body": "Test Export username password type",
+          "continue_on_failure": false,
+          "display_name": "Send Email",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "skip_execution": false,
+          "subject": "Test",
+          "target": {
+            "use_workflow_target": true
+          },
+          "to": "caddan@cisco.com"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_019TLS9TMB5573DTpGFSRPhVgIP2DovwBf9": {
+      "unique_name": "definition_target_019TLS9TMB5573DTpGFSRPhVgIP2DovwBf9",
+      "name": "ShamsSMTP",
+      "title": "ShamsSMTP",
+      "type": "email.smtp_endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_019TLRB0OH0PO1lfevlRcM6tyqLta01KFLO",
+        "display_name": "ShamsSMTP",
+        "no_runtime_user": false,
+        "port": 587,
+        "protocol": "SMTP",
+        "server": "smtp.gmail.com"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_019TLRB0OH0PO1lfevlRcM6tyqLta01KFLO": {
+      "unique_name": "definition_runtime_user_019TLRB0OH0PO1lfevlRcM6tyqLta01KFLO",
+      "name": "ShamsEmail",
+      "title": "ShamsEmail",
+      "type": "runtime_user.email_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "display_name": "ShamsEmail",
+        "password": "*****",
+        "sender": "*****"
+      }
+    }
+  }
+}
