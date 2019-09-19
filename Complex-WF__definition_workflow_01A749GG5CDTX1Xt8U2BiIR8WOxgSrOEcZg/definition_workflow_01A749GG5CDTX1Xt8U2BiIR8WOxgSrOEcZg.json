@@ -1,0 +1,3295 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01A749GG5CDTX1Xt8U2BiIR8WOxgSrOEcZg",
+    "name": "Shams_Complex_Workflow",
+    "title": "Shams_Complex_Workflow",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Shams_Complex_Workflow",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": false,
+        "execute_on_workflow_target": false,
+        "no_target": true,
+        "specify_on_workflow_start": false
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01A74APEHF7O24fMg8Y2BggZsqyHjyANvKL",
+        "name": "Query Object",
+        "title": "Query Object",
+        "type": "task.query_object",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "criteria": {
+            "operator": "eq"
+          },
+          "display_name": "Query Object",
+          "query_object": {
+            "event_type": "approval_task.event",
+            "query_event": true
+          },
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01A74CC7N4LA35Mo6gjQUZ6YrlyxhGuxrIt",
+        "name": "Group",
+        "title": "Group1",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Group1",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01A74B6PQ0S9K2WiJTASa3OTRx7CtpIk8Xh",
+            "name": "Group",
+            "title": "GroupA",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "GroupA",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A74B6T1BZUF0OFtaF5k7McgjhXV0V5TRw",
+                "name": "Condition Block",
+                "title": "Condition Block",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Condition Block",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01A74B6U2A3B66gWjAgjsibJ9WyNHaMwLn2",
+                    "name": "Condition Branch",
+                    "title": "Condition Branch",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "",
+                        "operator": "eq",
+                        "right_operand": ""
+                      },
+                      "display_name": "Condition Branch"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74BGSPI68S6A0iIbpX4zmAipMs7FR7BL",
+                        "name": "Find String",
+                        "title": "Find String",
+                        "type": "core.find_string",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Find String",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74B6WO9TJ56mMCm7LeziJWg3DsRzMJXT",
+                    "name": "Condition Branch",
+                    "title": "Condition Branch",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "",
+                        "operator": "eq",
+                        "right_operand": ""
+                      },
+                      "display_name": "Condition Branch"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74BMO4TV7J2eFjeLjL7aVwV1CmGLGFHG",
+                        "name": "Replace String",
+                        "title": "Replace String",
+                        "type": "core.replacestring",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Replace String",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A74B6ZDRLU85xyWfJNyBctZpXya1CN3DW",
+                "name": "For Each",
+                "title": "For Each",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74B72C2WF46B5QpWNbUkYQJJ1WCl74Ov",
+                    "name": "Sleep",
+                    "title": "Sleep",
+                    "type": "core.sleep",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Sleep",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01A74D1LV1OGS7kkewGEDLO33vHlH2CmzjC",
+            "name": "Group",
+            "title": "Group2",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group2",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A74D1OGPO6M2o5aH7brKu5cXGVWCCif9o",
+                "name": "Group",
+                "title": "GroupA",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "GroupA",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74D1QMDYJV5t6x43CCfRKDAi5szgMxvo",
+                    "name": "Condition Block",
+                    "title": "Condition Block",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Condition Block",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01A74D1ROQREV5puB8hN7VOAgkr9WNi8lWu",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74D1SYVXR76NWqP3WlfAP8qUfXX52qRZ",
+                            "name": "Find String",
+                            "title": "Find String",
+                            "type": "core.find_string",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Find String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74D1U5VIA94LhspWeFpKzC3mnbOAvuei",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74D1VF6HGW4HGB3uTsdWkXDsI12i1oER",
+                            "name": "Replace String",
+                            "title": "Replace String",
+                            "type": "core.replacestring",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Replace String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74D1WMNRTK2yjFvhfxpu8ORhDiAncKA1",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74D1ZIKJWV4ywArqiIG5btWB4WhZRuoY",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01A74FNZDZZJG5uFrMjstCbfkFcM2WrJspf",
+            "name": "Group",
+            "title": "Group3",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group3",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A74FO2A58XV6QcAICfDVHredKMBdNaDdh",
+                "name": "Group",
+                "title": "GroupA",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "GroupA",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74FO4OQFM565pIDivog1KydA2zKnFj2y",
+                    "name": "Condition Block",
+                    "title": "Condition Block",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Condition Block",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01A74FO5X89DI57X1E168HTcicTeDYIRoHS",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74FO7IYYGL0fSnBv8JfAiRh8vud9slqb",
+                            "name": "Find String",
+                            "title": "Find String",
+                            "type": "core.find_string",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Find String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74FO8PJYIA4oVbRzEj0WD4ltybi2Drqs",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74FOA5828177fPC0B01pz6Syn5q5Jom1",
+                            "name": "Replace String",
+                            "title": "Replace String",
+                            "type": "core.replacestring",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Replace String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74FOBJPJ6117dgaRooBKXJnR9rKOPdpx",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74FOE1HCTN4yujB6Zpj12D9gRyqCdDyx",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A74FPQGAPGO2JfOcairtOkEOT5wNsa6mS",
+                "name": "Group",
+                "title": "Group4",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group4",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74FPU3CJFA0feUBkrQXpB2chSk7W3toZ",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74FPYKWLZG4BaRwAJr6THFbMA9w5PBrk",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A74FQ0DA9882SkUhAzSok3dbFyCgjqu8X",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74FQ28CXUO1nqCcdeecO9OWVb2rW3wS7",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74FQ3ZC4BZ1CQ1I8GFU5uVz3YWRSEsk3",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74FQ5XLA3673qDEsSx6yGPgucQYR2Fn5",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74FQ7NRWZJ6RupBSsy1jowqYTaX5tXmA",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74FQBHL9QX2OeqsU3SC10BIZPwSKP9iN",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01A74WM63KRNG1KC8YLwVc2guyBrJx8lpK9",
+            "name": "Group",
+            "title": "Group5",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group5",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A74WM8ZD6UK4syvyHRGtUYo32iM37E72G",
+                "name": "Group",
+                "title": "GroupA",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "GroupA",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74WMBLDPSU6U97uuwbLEnMpgRfV66310",
+                    "name": "Condition Block",
+                    "title": "Condition Block",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Condition Block",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01A74WMCU0KZ35cWBNs4tlSBPs2LsPgA4aL",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74WME3IU7837cZkGa6UxAwduBxVZ9d3c",
+                            "name": "Find String",
+                            "title": "Find String",
+                            "type": "core.find_string",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Find String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74WMF87FF015XEQCgaUXqF7gTVtxJrHK",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74WMGPR8NE20E4rrofC3KneTVUsfWYAD",
+                            "name": "Replace String",
+                            "title": "Replace String",
+                            "type": "core.replacestring",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Replace String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74WMHYPP034wwhSGgcZQFqLnVaFAOinu",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74WMKYGMZH0IzqNjfxPs59JQe2TetlAw",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A74WO3BBY8F2LzLj1SSzutFeiwBTNaHR1",
+                "name": "Group",
+                "title": "Group6",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group6",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74WO6V2CAN4RyxjYjJwGaDJV5NEwovBy",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74WOALIKVN5fqr2MRZGcM0NPbSaeKR0r",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A74WOCGA3AR0etTXlHRKfzVKeGJE1Cb7X",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74WOEM237H27iiqfEkn55kHhtBwYbecA",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74WOG9M2ZN5bNud0ui4xAGuJXtAiIL3Q",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74WOID9R4Q4Dqv0tdbi1PfYqpJABjX0R",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74WOK304G01OpiV0EJXEAwkN4USOsDA9",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74WONUZ37A3wsOH4EZhfyDz5sns7nAmS",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A74WR1WP0W93OBi8nW8iYZcRe2D7K0nZL",
+                "name": "Group",
+                "title": "Group7",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group7",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74WR6ZS39R4Ogw8jgQ80fRdRJO1o2f3K",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74WRBXDQF03nGV3Dx67gMv8yNFOMf8ng",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A74WRED22FB0whn9vr4Jbmn8Hacyvzqre",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74WRHFMA8415ifhLz7yxw1n5DMmU1URC",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74WRK8SJV92mlcWzEmupsYocCPcE5EXC",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74WRNW7A6V1SrVkcXEXPkqLj0U5xU92S",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74WRR4HU8P3qPh4biqlb7wCvqosdoR7T",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74WRYRKZGE2MngTOrvYhuDesh0b9Rh5q",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74WUVXTEMA3hQFuSAoOGyEpnnsF1NX7x",
+                    "name": "Group",
+                    "title": "Group8",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Group8",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74WV4O7AH70s6qQGAKnKzcJWIhVXDd84",
+                        "name": "Group",
+                        "title": "GroupA",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "GroupA",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74WVC73A0R56NC5e0DmvAY3c7G9l42RR",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Condition Block",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01A74WVFUDFQK5folvfk8Vq7WrzgHuWlAr2",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74WVJTURSW49HDitXQTKwrfc5TVhkp15",
+                                    "name": "Find String",
+                                    "title": "Find String",
+                                    "type": "core.find_string",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Find String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A74WVNNVGMA0A8m9u5mIzHIN9yeWmdJJa",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74WVRFRTUN5CNERb7y0TAqjZizLf66uQ",
+                                    "name": "Replace String",
+                                    "title": "Replace String",
+                                    "type": "core.replacestring",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Replace String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74WVVDT75I2NMfXfyqCyJFtQw7cmhSyq",
+                            "name": "For Each",
+                            "title": "For Each",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "For Each",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74WW36192P3EKnhe1UBOEaplpNpihMps",
+                                "name": "Sleep",
+                                "title": "Sleep",
+                                "type": "core.sleep",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Sleep",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A74JB17LHNR7M5LVWX837LSr6LPBMI6hP",
+                "name": "Group",
+                "title": "Group9",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group9",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A74JB3UPJAM0ddtjFP4yr7kNq87jl5AVK",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74JB5ZOZFV3F4vdfziBdpGtytBFBF1sN",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A74JB720GAC0xKmTdb8YINRJHOh6Cf0aU",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74JB8K4SAB3iJ05BW6o6T3v3REWjXSaK",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74JB9OMDAE5r3qwFKLMlyZWEyuLqvYR1",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74JBB10GB97OS98UfmZMZNVKDFH1M6dm",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74JBC80QRW513K6bYlP5LgbgShatfUcK",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74JBERNDYX3Kca7kx4FkD2evWKJgAbEs",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74JCVO5WSA4W3zqkBoJjr37FjkrPIuj9",
+                    "name": "Group",
+                    "title": "Group10",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Group10",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74JD005LRF7Nua0wYCOCaVqFTAPZs9Td",
+                        "name": "Group",
+                        "title": "GroupA",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "GroupA",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74JD4RQ6SM1eDgsrK0cXDEqK1b6Fz7Tm",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Condition Block",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01A74JD6SUP9I6N7Uw2uVQXePLWqQLeIlSZ",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74JD8WXSYA0MNWqY1ISdtXhjwBk7S3TZ",
+                                    "name": "Find String",
+                                    "title": "Find String",
+                                    "type": "core.find_string",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Find String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A74JDALPG3Y3Dckf9YstfhLOPQjXOwF9S",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74JDCRRUQN2K4GyCdBtQeWkJHQ7mvtOr",
+                                    "name": "Replace String",
+                                    "title": "Replace String",
+                                    "type": "core.replacestring",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Replace String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74JDELT77G4KKCq60qNYLWWnf1edaNWP",
+                            "name": "For Each",
+                            "title": "For Each",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "For Each",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74JDIJY66S5NNNLzTkadClE38DJInyrZ",
+                                "name": "Sleep",
+                                "title": "Sleep",
+                                "type": "core.sleep",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Sleep",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A74JG2ZPA4H1mElfWukL65HL7iYrD4Qkr",
+                    "name": "Group",
+                    "title": "Group11",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Group11",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A74JG8TR6X02UFZBguUea0lbIQszlhsbZ",
+                        "name": "Group",
+                        "title": "GroupA",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "GroupA",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74JGGO3NU06tECxMk1pqRknlnJEfrh9L",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Condition Block",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01A74JGJQEKS57cykP2JAx20NnUweVUh0KQ",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74JGN0REJM7HiJOhcFrIbB6dCH89oIDv",
+                                    "name": "Find String",
+                                    "title": "Find String",
+                                    "type": "core.find_string",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Find String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A74JGPTIPBN0zAtOcsHqFHdeFPuqX4FKs",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74JGTNDQKQ3XBKNFhUwja0QfrkinQfKt",
+                                    "name": "Replace String",
+                                    "title": "Replace String",
+                                    "type": "core.replacestring",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Replace String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A74JGX282OK2gPwsmsWc2h15jIeQN9RzS",
+                            "name": "For Each",
+                            "title": "For Each",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "For Each",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74JH7JG8W144YfHfs1A2wgYlyaF8yVSs",
+                                "name": "Sleep",
+                                "title": "Sleep",
+                                "type": "core.sleep",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Sleep",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A74JK5XQMTX29tuybXnAo1ndabnlvd2Cj",
+                        "name": "Group",
+                        "title": "Group12",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Group12",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A74JKD7STKR1GlojWWoXzFwTtqgHw5ACO",
+                            "name": "Group",
+                            "title": "GroupA",
+                            "type": "logic.group",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "GroupA",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A74JKKFAPR95kdxEr8l97Mjuuajmly0nq",
+                                "name": "Condition Block",
+                                "title": "Condition Block",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Condition Block",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01A74JKNIUSZ21pTF7WurAvRu5BbJZO7eHE",
+                                    "name": "Condition Branch",
+                                    "title": "Condition Branch",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "",
+                                        "operator": "eq",
+                                        "right_operand": ""
+                                      },
+                                      "display_name": "Condition Branch"
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01A74JKRDTGXF532DJ7FR4zR4yZqC4qcQpT",
+                                        "name": "Find String",
+                                        "title": "Find String",
+                                        "type": "core.find_string",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Find String",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01A74JKX7Z8127KpUphcPV64BWQaTbC0Qlr",
+                                    "name": "Condition Branch",
+                                    "title": "Condition Branch",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "",
+                                        "operator": "eq",
+                                        "right_operand": ""
+                                      },
+                                      "display_name": "Condition Branch"
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01A74JL0YKGHI03azitD2DUR95JoPeEiUuL",
+                                        "name": "Replace String",
+                                        "title": "Replace String",
+                                        "type": "core.replacestring",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Replace String",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A74JL447U0L6WcOBdAz9ZD6Wk6izDFGNF",
+                                "name": "For Each",
+                                "title": "For Each",
+                                "type": "logic.for_each",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "For Each",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A74JLBOQU446G14tNxvGgsPoJx379MzNW",
+                                    "name": "Sleep",
+                                    "title": "Sleep",
+                                    "type": "core.sleep",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Sleep",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01A75C0WVC00P2UxLj40R7tAnC1l8Lgap8E",
+        "name": "Group",
+        "title": "Group1",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Group1",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01A75C0ZC3TJM3cXbCC6HUAHHdmZDdZUUXG",
+            "name": "Group",
+            "title": "GroupA",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "GroupA",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A75C11IGNZA2pkyjRgNjLpPRVpysDdg0K",
+                "name": "Condition Block",
+                "title": "Condition Block",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Condition Block",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01A75C12K6XTX5CcxKcvdcyEQCKonqJ4XyZ",
+                    "name": "Condition Branch",
+                    "title": "Condition Branch",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "",
+                        "operator": "eq",
+                        "right_operand": ""
+                      },
+                      "display_name": "Condition Branch"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C13U8S7H7PU6kx7ETfYGOHCDfOTz1N",
+                        "name": "Find String",
+                        "title": "Find String",
+                        "type": "core.find_string",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Find String",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C152OWGK5f2urTDUsBFkdtWtskqqwm",
+                    "name": "Condition Branch",
+                    "title": "Condition Branch",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "",
+                        "operator": "eq",
+                        "right_operand": ""
+                      },
+                      "display_name": "Condition Branch"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C16DWIUF3jXNQOQKJMolFN6Gye5QAI",
+                        "name": "Replace String",
+                        "title": "Replace String",
+                        "type": "core.replacestring",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Replace String",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A75C17Q4W1O3WGxrysxWzVAh6zIX4WV2O",
+                "name": "For Each",
+                "title": "For Each",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C1AP8P4K73u8kaisZexQLgrH2C3SBN",
+                    "name": "Sleep",
+                    "title": "Sleep",
+                    "type": "core.sleep",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Sleep",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01A75C1BZC2100GDb4UgMYMbxvfB1SF0BVP",
+            "name": "Group",
+            "title": "Group2",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group2",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A75C1EL4A581rJfOVqV7F7Rkaye7tAxhR",
+                "name": "Group",
+                "title": "GroupA",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "GroupA",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C1H8KPB83KcIenvH812kR1Y3uD1IaQ",
+                    "name": "Condition Block",
+                    "title": "Condition Block",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Condition Block",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01A75C1IJL09C1etDaitguw9cejboc6AQ1r",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C1K3ZOFW7KGPOZNmK59Wm9UJh3FRI9",
+                            "name": "Find String",
+                            "title": "Find String",
+                            "type": "core.find_string",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Find String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C1LGDTJI4TQ8D4UMbcr8u3oyroA8oD",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C1MY8RER1ibH2Pc9n1YXklyOVPjtND",
+                            "name": "Replace String",
+                            "title": "Replace String",
+                            "type": "core.replacestring",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Replace String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C1OASAZ32dt15wHqfGGn8puHo2TfRB",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C1R3XKAF4rIoYluOfXaN4pGtvLjfh0",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01A75C1SMQF212VGrukdapqKEeJwcIDfAGK",
+            "name": "Group",
+            "title": "Group3",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group3",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A75C1VPPVTV1qyKOwv2wFBjaG3Suwz4G0",
+                "name": "Group",
+                "title": "GroupA",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "GroupA",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C1YVSX4542dcluPqOmwutd9lNlDnp1",
+                    "name": "Condition Block",
+                    "title": "Condition Block",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Condition Block",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01A75C20FQCCP6g1qL9zIP8wylsS5aNheQo",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C221XS4V3LcPuGn5ylqW6lj19aCAGq",
+                            "name": "Find String",
+                            "title": "Find String",
+                            "type": "core.find_string",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Find String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C23JI1GN1eZKmjEB7dmlK8tNddcsSH",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C257H2FI0MHT2xXbBYqP4Xe2TPR2Nr",
+                            "name": "Replace String",
+                            "title": "Replace String",
+                            "type": "core.replacestring",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Replace String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C26QSUWE3KtA04YS0nnK0wngkkzQuU",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C2A5WX8S1efsfcpbQM4DFikoSkYwpS",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A75C2BYHH0I1a9nQBohmZvlMucQzdzoJz",
+                "name": "Group",
+                "title": "Group4",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group4",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C2FO4FCT1ROPwltf4c4tQKweEMnWoe",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C2J5Q3U51suA4mnZGOc7NaVSyP2aSb",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A75C2KRPAJ64mtLnbPFybQH14JEA1ezE6",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C2MMC4PQ6I1yES3Og0lBUwezoJKnpZ",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C2O95QWZ3H9fPs2XLT8spM7uLiaIK8",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C2Q35Y4V4SOIrm6l70EHmQ6AZHS7hJ",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C2RY42LD6gp8n6zfuuRqojXSqzNPKg",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C2VJJ12Y0HVp6P2iEIVog8ufOum0rH",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01A75C2XCDFIG3BGgY4EO06R7bjSToG3N8f",
+            "name": "Group",
+            "title": "Group5",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group5",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01A75C318CYHK5CZAI4Q5Et5vkQ53ctnUxb",
+                "name": "Group",
+                "title": "GroupA",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "GroupA",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C35AUXPI3O60v38o4wV615b2LbPqmw",
+                    "name": "Condition Block",
+                    "title": "Condition Block",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Condition Block",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01A75C37BK6YU5i6eymsme8a1nJMZstpunf",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C39ITUZA3ujtFRTWXIVA5Wk3VejuP6",
+                            "name": "Find String",
+                            "title": "Find String",
+                            "type": "core.find_string",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Find String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C3BF5DL52BaXvmcev4pgiS5cmOWESH",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "",
+                            "operator": "eq",
+                            "right_operand": ""
+                          },
+                          "display_name": "Condition Branch"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C3DGU9PZ2N7xkPwVLhy97ynFlfniCk",
+                            "name": "Replace String",
+                            "title": "Replace String",
+                            "type": "core.replacestring",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Replace String",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C3FG18UH5ILpv0hxYMTzGMWE8LGsYS",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C3JKQT0158hhv78LXGCQFXSmEwohfJ",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A75C3LLNB5131USguxcyGIvN3qF5QYFl0",
+                "name": "Group",
+                "title": "Group6",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group6",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C3PUD5ON2GA7rxJ81StsGijFPj5Qad",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C3U4XHRS7af5AHQmk5FjNXQbmD8DXm",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A75C3WAS8Y86jZFSDdIXhrrQvGSjXmJtJ",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C3YKP11V57Or5W8NQNuMg7c3tCBbxX",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C40L9ELG7l5gpI2CKVni8D7DAduaQD",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C42Q705M2QeAxdQdvIUK5aosinTmXX",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C45MD7LV1ySG2zRjSitWyQMqL4vXc7",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C4C64JD37Bn9Sd3HOyp1ZSQObNlh82",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A75C4ETYJ3M7JCRcnyRaIfUC5mto6oUGr",
+                "name": "Group",
+                "title": "Group7",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group7",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C4KIP7XN4kKwkBb51ZBvBKZSpg8STq",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C4PXIK1N2W1ZwjoyKO1rIQIAJr1KzL",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A75C4SXFCKY5BdvCPumaPDdEPIRoXRNur",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C4VFJ2QC6DTVqhwEDpEu00FgPkzBfY",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C4XNA5ML4Q6kmDc5Gt6ePKACdMe1sD",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C50BFDZF02lfK8CkpK8nFdTDzt3o24",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C539PHQ86nJklBecxduF6admfw3aLI",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C59O2C8U6lAiMLSYZd8hZSZ5wvy4Gh",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C5CG33T40E6bnbby2w7SIVw61fMZt7",
+                    "name": "Group",
+                    "title": "Group8",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Group8",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C5MGJX8B0OeOtbtvZhGAMSxZscZIpc",
+                        "name": "Group",
+                        "title": "GroupA",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "GroupA",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C5RP32MD70LbmSdy6RCzTBrtgdKVXE",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Condition Block",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01A75C5UBXS2D5PmKWYhHJ7NadsxHETp76q",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75C5X1W3Q03vUvz3XcFh3cU0lEFG6A3j",
+                                    "name": "Find String",
+                                    "title": "Find String",
+                                    "type": "core.find_string",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Find String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A75C5ZN5I364D4HAFWolAHBpQrzn6Ehtv",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75C62HCHHW47jGowSV5TtM2Jwj22rArY",
+                                    "name": "Replace String",
+                                    "title": "Replace String",
+                                    "type": "core.replacestring",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Replace String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C65R043S2XxMdXHzSSDCXOEDbyh7Z7",
+                            "name": "For Each",
+                            "title": "For Each",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "For Each",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C6BU4AGA44kbBzOqP5jBrtgwqI9hmw",
+                                "name": "Sleep",
+                                "title": "Sleep",
+                                "type": "core.sleep",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Sleep",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01A75C6EWBSML0HwCxBuvTMjOfEjM8zooU3",
+                "name": "Group",
+                "title": "Group9",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Group9",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01A75C6KF1PSV0CWbCrhN65XbFbnaOMcDL7",
+                    "name": "Group",
+                    "title": "GroupA",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "GroupA",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C6QMHH8N7UdFNAGhqQokHWNVyXBqUn",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01A75C6TVVQ045S2KHkL25Z0JVPjqhs0m59",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C6XK70073XHaT1IK7nQQVcTXGeJmN5",
+                                "name": "Find String",
+                                "title": "Find String",
+                                "type": "core.find_string",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Find String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C70W3CTY3sDgWNZCxE4mD0ynJWZGk5",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "",
+                                "operator": "eq",
+                                "right_operand": ""
+                              },
+                              "display_name": "Condition Branch"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C748FJMV1mbPXL7iebFyuWknhRi9tp",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C7790WX020YODpdlRr1ssWxCHRNsOT",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C7E7CUDA4aPvwjCm8x5KmczbvUaZTR",
+                            "name": "Sleep",
+                            "title": "Sleep",
+                            "type": "core.sleep",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Sleep",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C7HHT99I7LtyUBtlCZ6McR0LrCDNbs",
+                    "name": "Group",
+                    "title": "Group10",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Group10",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C7OATUL32B5BnRE6WMNWUpblXqiOHN",
+                        "name": "Group",
+                        "title": "GroupA",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "GroupA",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C7V8XVDC29PI7bLMxd62G3ofm70RQo",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Condition Block",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01A75C7YOQS3T78wBir2NlAaj2MD7t62kJb",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75C8249AQQ52sLanRK1Koic1RGSAITpx",
+                                    "name": "Find String",
+                                    "title": "Find String",
+                                    "type": "core.find_string",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Find String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A75C85P820P7QV892ynY93T6XiGOY1Ojx",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75C8994SV96sBYRbJRtS2gZaotOlJ6WC",
+                                    "name": "Replace String",
+                                    "title": "Replace String",
+                                    "type": "core.replacestring",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Replace String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C8C3W3D63OFQwmuqd7sVHbLqAjXwud",
+                            "name": "For Each",
+                            "title": "For Each",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "For Each",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C8IQ8K1B5raRY32AFesz1c4wPz2czr",
+                                "name": "Sleep",
+                                "title": "Sleep",
+                                "type": "core.sleep",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Sleep",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01A75C8LR62IY0PHhnUhtqnvPxHvhFDhXh9",
+                    "name": "Group",
+                    "title": "Group11",
+                    "type": "logic.group",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Group11",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01A75C8S0HAML654ZoAAEnl7IeKNDlZTd32",
+                        "name": "Group",
+                        "title": "GroupA",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "GroupA",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75C920MH6V6Z9yxjhjlTs91HnYej4TwL",
+                            "name": "Condition Block",
+                            "title": "Condition Block",
+                            "type": "logic.if_else",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Condition Block",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_01A75C972OA5K0wxy15Zpgrjsj8O3HnGRte",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75C9AVJS1Q1IIsVz8HC4x71MgaGAMUvJ",
+                                    "name": "Find String",
+                                    "title": "Find String",
+                                    "type": "core.find_string",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Find String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A75C9DXV29S0F4K75TH7CAIr9AZPOB31X",
+                                "name": "Condition Branch",
+                                "title": "Condition Branch",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "",
+                                    "operator": "eq",
+                                    "right_operand": ""
+                                  },
+                                  "display_name": "Condition Branch"
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75C9HB8AHA0xXW1Fd6xDdKYwgUi5CGOI",
+                                    "name": "Replace String",
+                                    "title": "Replace String",
+                                    "type": "core.replacestring",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Replace String",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01A75C9K22GE27Hkj9VZOx3d9WrhbmtLwFr",
+                            "name": "For Each",
+                            "title": "For Each",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "For Each",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75C9RBL5JO3pHegwcXE5xV7M4V5eDFqd",
+                                "name": "Sleep",
+                                "title": "Sleep",
+                                "type": "core.sleep",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Sleep",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01A75C9V63WUN65d0CT4O3jwik5UJMZefoW",
+                        "name": "Group",
+                        "title": "Group12",
+                        "type": "logic.group",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Group12",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01A75CA2B4DPF0bTNbe8iBBfzvvt5jkyINd",
+                            "name": "Group",
+                            "title": "GroupA",
+                            "type": "logic.group",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "GroupA",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01A75CA9S5FKA6Hs1xft3lKFAQpGf3Hz8FS",
+                                "name": "Condition Block",
+                                "title": "Condition Block",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Condition Block",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01A75CADHCWCT7X2FLUUaYHauncV9e8YN9J",
+                                    "name": "Condition Branch",
+                                    "title": "Condition Branch",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "",
+                                        "operator": "eq",
+                                        "right_operand": ""
+                                      },
+                                      "display_name": "Condition Branch"
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01A75CAGQ5WAC4hkhNdCaIDhBxCA5Ir62HE",
+                                        "name": "Find String",
+                                        "title": "Find String",
+                                        "type": "core.find_string",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Find String",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01A75CAKIBSVF4Ey5eCpd9bYt7r2S0blNO0",
+                                    "name": "Condition Branch",
+                                    "title": "Condition Branch",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "",
+                                        "operator": "eq",
+                                        "right_operand": ""
+                                      },
+                                      "display_name": "Condition Branch"
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01A75CAQ4SJPX2CEwHwz8NXdFYPU73MRP6V",
+                                        "name": "Replace String",
+                                        "title": "Replace String",
+                                        "type": "core.replacestring",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Replace String",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01A75CATJWGUZ2zNA47nUCsZ2wrMpqAXnFV",
+                                "name": "For Each",
+                                "title": "For Each",
+                                "type": "logic.for_each",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "For Each",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01A75CB1450SZ0VoCat2Q9TdKDjb2kFCOEq",
+                                    "name": "Sleep",
+                                    "title": "Sleep",
+                                    "type": "core.sleep",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "continue_on_failure": false,
+                                      "display_name": "Sleep",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  }
+}
